@@ -1,3 +1,4 @@
+package com.example.bostontute;
 import com.example.bostontute.R;
 
 import android.app.Activity;
