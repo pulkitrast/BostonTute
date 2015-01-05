@@ -11,14 +11,37 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
+                <activity
+            android:name=".Splash"
+            android:label="Blah" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
         <activity
             android:name="com.example.bostontute.Act"
             android:label="Blah" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />"
+                <action android:name="com.example.bostontute.ACT" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+           <activity
+            android:name="com.example.bostontute.Menu"
+            android:label="Blah" >
+            <intent-filter>
+                <action android:name="com.example.bostontute.MENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <activity
+            android:name="com.example.bostontute.TextPlay"
+            android:label="Blah" >
+            
         </activity>
     </application>
 
