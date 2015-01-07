@@ -40,9 +40,15 @@
             </intent-filter>
         </activity> <activity
             android:name="com.example.bostontute.TextPlay"
-            android:label="Blah" >
+            android:label="Blah" >            
             
         </activity>
+        <activity
+            android:name="com.example.bostontute.Email"
+            android:label="Blah" >            
+            
+        </activity>
+        
     </application>
 
 </manifest>
