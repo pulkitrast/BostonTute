@@ -1,8 +1,12 @@
 package com.example.bostontute;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,6 +30,8 @@ public class Camera extends Activity implements View.OnClickListener {
 		ini();
 		b.setOnClickListener(this);
 		ib.setOnClickListener(this);
+		InputStream is = getResources().openRawResource(R.drawable.ic_launcher);
+		bmp = BitmapFactory.decodeStream(is);
 
 	}
 
@@ -46,6 +52,12 @@ public class Camera extends Activity implements View.OnClickListener {
 			startActivityForResult(i, cameraData);
 			break;
 		case R.id.bsetBack:
+			try {
+				getApplicationContext().setWallpaper(bmp);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			break;
 		}
 
@@ -56,8 +68,8 @@ public class Camera extends Activity implements View.OnClickListener {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
 		if (resultCode == RESULT_OK) {
-			Bundle extrs=data.getExtras();
-			bmp=(Bitmap)extrs.get("data");
+			Bundle extrs = data.getExtras();
+			bmp = (Bitmap) extrs.get("data");
 			iv.setImageBitmap(bmp);
 		}
 

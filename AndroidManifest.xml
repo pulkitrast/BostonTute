@@ -7,51 +7,80 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="21" />
 
+    <uses-permission android:name="android.permission.SET_WALLPAPER" >
+    </uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
-                <activity
+        <activity
             android:name=".Splash"
-            android:label="Blah" >
+            android:label="Welcome" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="com.example.bostontute.Act"
-            android:label="Blah" >
+            android:label="ACT 1" >
             <intent-filter>
                 <action android:name="com.example.bostontute.ACT" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-           <activity
+        <activity
             android:name="com.example.bostontute.Menu"
-            android:label="Blah" >
+            android:label="Menu" >
             <intent-filter>
                 <action android:name="com.example.bostontute.MENU" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity> <activity
+        </activity>
+        <activity
             android:name="com.example.bostontute.TextPlay"
-            android:label="Blah" >            
-            
+            android:label="Text" >
         </activity>
         <activity
             android:name="com.example.bostontute.Email"
-            android:label="Blah" >            
-            
+            android:label="Email" >
         </activity>
         <activity
             android:name="com.example.bostontute.Camera"
-            android:label="Blah" >            
-            
+            android:label="Camera"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.bostontute.Data"
+            android:label="dataText" >
+        </activity>
+        <activity
+            android:name="com.example.bostontute.OpenedClass"
+            android:label="Select-A-Thon" >
+        </activity>
+        <activity
+            android:name="com.example.bostontute.AboutUs"
+            android:label="All you need to know"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.example.bostontute.ABOUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.bostontute.More"
+            android:label="MORE" 
+            android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="com.example.bostontute.MORE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 
