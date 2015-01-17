@@ -50,13 +50,19 @@ public class Menu extends ListActivity {
 		// TODO Auto-generated method stub
 		switch (item.getItemId()) {
 		case R.id.aboutUs:
-			Intent i=new Intent("com.example.bostontute.ABOUT");
+			Intent i = new Intent("com.example.bostontute.ABOUT");
 			startActivity(i);
 			break;
 		case R.id.preference:
+			Intent p = new Intent("com.example.bostontute.PREFS");
+			startActivity(p);
 			break;
 		case R.id.bitMore:
 			startActivity(new Intent("com.example.bostontute.MORE"));
+			break;
+		case R.id.exit:
+			finish();
+			break;
 
 		}
 		return false;
